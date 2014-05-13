@@ -1,0 +1,36 @@
+/* ! =====================================================================
+							Layout Settings
+========================================================================== */
+
+a:link
+	color: medium-grey
+	text-decoration: none
+	&:hover
+		color: dark-grey
+		text-decoration: underline
+
+a:visited
+	color: dark-grey
+
+#skip 
+	display: none
+
+#page
+	width: 980px
+	margin: 0 auto
+	@media tablet
+		width: 768px
+	@media phone
+		width: 320px
+	clearfix()
+	overflow: hidden
+
+ul.menu li
+	display: inline
+	margin: 0 20px 0 0
+	padding: 0
+
+.item-list ul li {
+	margin: 0
+	padding: 0
+}

@@ -1,0 +1,24 @@
+/* ! =====================================================================
+					Semantic GridSystem settings
+========================================================================== */
+
+// Semantic GridSystem settings
+total-width = 100%
+column-width = 70px
+gutter-width = 10px
+  
+// Device media queries
+desktop = '(min-width: 960px)'
+tablet = "(min-width: 768px) and (max-width: 959px)"
+phone = "(max-width: 767px)"
+  
+// Device specific mixins
+hideOn(device)
+  display: inherit // bug in stylus, we need a core rule
+  @media device
+      display: none !important
+  
+showOn(device)
+  display: none
+  @media device
+      display: inherit !important

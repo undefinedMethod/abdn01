@@ -54,13 +54,27 @@ gulp.task('stylus', function() {
         .pipe(connect.reload());
 });
 
+// Get files and distribute
+gulp.task('push', function() {
+    var pushStylSrc = './build/css/*.css';
+    pushStylDst = './css';
+
+    gulp.src([pushStylSrc])
+        .pipe(gulp.dest(pushStylDst))
+        .pipe(connect.reload());
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['lint', 'scripts']);
     gulp.watch('./src/*.php', ['php']);
     gulp.watch('./src/templates/*.php', ['php']);
-    gulp.watch('./src/stylus/**/*.styl', ['stylus']);
+    gulp.watch('./src/stylus/**/*.styl', ['stylus', 'push']);
 });
 
 // Default Task
-gulp.task('default', ['connect', 'lint', 'php', 'stylus', 'watch']);
+gulp.task('default', ['connect', 'lint', 'php', 'stylus', 'watch', 'assets']);
+
+gulp.task('assets', function() {
+    gulp.start('push');
+});

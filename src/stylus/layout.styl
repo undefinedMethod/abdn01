@@ -1,12 +1,12 @@
-/* ! =====================================================================
-							Layout Settings
-========================================================================== */
+/*! Layout Settings
+   ========================================================================== */
 
 a:link
 	color: medium-grey
+	font-weight: bold
 	text-decoration: none
 	&:hover
-		color: dark-grey
+		color: light-grey
 		text-decoration: underline
 
 a:visited
@@ -15,9 +15,12 @@ a:visited
 #skip 
 	display: none
 
+#header
+	margin: 2em 0 2em 0
+
 #page
 	width: 980px
-	margin: 0 auto
+	margin: 0 auto 0 auto
 	@media tablet
 		width: 768px
 	@media phone
@@ -25,12 +28,32 @@ a:visited
 	clearfix()
 	overflow: hidden
 
+ul.menu
+	column(5)
+	float: right
+	@media tablet
+		column(7)
+		float: right
+	@media phone
+		column(12)
+		margin: 0 0 2em 0
+		float: right
+
 ul.menu li
 	display: inline
-	margin: 0 20px 0 0
-	padding: 0
+	margin: 0 0 0 0
+	padding: 0px 10px 0px 10px
+	font-size: font-medium
+	font-weight: font-bold
+	min-width: 100px
 
-.item-list ul li {
+	a
+		&:hover
+			color: light-grey
+			text-decoration: none
+		@media phone
+			font-size: 0.6em
+
+.item-list ul li
 	margin: 0
 	padding: 0
-}

@@ -29,7 +29,8 @@ stylesheets[all][] = css/screen.css
 stylesheets[print][] = css/print.css
 
 ; Scripts
-scripts[] = js/build/modernizr.js
+scripts[] = build/js/header.js
+scripts[] = build/js/site.js
 
 settings[abdn01_tabs] = 1
 settings[abdn01_breadcrumb] = 1

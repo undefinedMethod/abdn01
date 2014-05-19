@@ -191,6 +191,8 @@ td,
 th {
   padding: 0;
 }
+/* Semantic.gs // for Stylus: http://learnboost.github.com/stylus/
+========================================================================== */
 body {
   width: 100%;
   *zoom: 1;
@@ -203,8 +205,10 @@ body:after {
 body:after {
   clear: both;
 }
+/* Semantic GridSystem settings
+========================================================================== */
 /* Base Settings
-   ========================================================================== */
+========================================================================== */
 body {
   margin: 0;
   font: 13px/1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
@@ -357,7 +361,7 @@ div.status {
   border-color: #be7;
 }
 /* Layout Settings
-   ========================================================================== */
+========================================================================== */
 a:link {
   color: #7f7f7f;
   font-weight: bold;
@@ -457,7 +461,7 @@ ul.menu li a:hover {
   padding: 0;
 }
 /* Blog Settings
-   ========================================================================== */
+========================================================================== */
 .pane-blog {
   display: inline;
   float: left;
@@ -467,8 +471,33 @@ ul.menu li a:hover {
   *width: 57.2916666666667% -correction;
   *margin: 0 0.5208333333333% -correction;
 }
+@media (min-width: 768px) and (max-width: 959px) {
+  .pane-blog {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 73.9583333333333%;
+    margin: 0 0.5208333333333%;
+    *width: 73.9583333333333% -correction;
+    *margin: 0 0.5208333333333% -correction;
+  }
+}
+@media (max-width: 767px) {
+  .pane-blog {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 98.9583333333333%;
+    margin: 0 0.5208333333333%;
+    *width: 98.9583333333333% -correction;
+    *margin: 0 0.5208333333333% -correction;
+  }
+}
+.blog-teaser {
+  margin: 0 0 4em 0;
+}
 /* Contact Settings
-   ========================================================================== */
+========================================================================== */
 .pane-contact-me {
   display: inline;
   float: left;
@@ -509,4 +538,9 @@ ul.menu li a:hover {
   padding: 0.2em 0.5em 0.2em 0.5em;
   background: #e8e8e8;
   border: none;
+}
+/* Twitter Settings
+========================================================================== */
+.pane-tweets li.views-row {
+  margin: 0 0 1em 0;
 }
